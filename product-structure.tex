@@ -1,9 +1,10 @@
 \documentclass[xcolor=dvipsnames]{beamer}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{xmpmulti}
 
-
-\usetheme{Antibes}
+% \usetheme{Antibes}
+\usetheme{boxes}
 \usecolortheme{wolverine}
 
 \setbeamercolor{emph}{fg=orange}
@@ -12,10 +13,14 @@
 }
 
 \title{Product Structure Theorems}
-\author{Pat Morin}
+\author{}
 \date{}
-\institute{Carleton University \\[1em]
-  \includegraphics[width=.6\textwidth]{images/Queue11}
+\institute{
+  \includegraphics[width=.6\textwidth]{images/Queue11} \\
+  $G\subseteq H\boxtimes P$ \\
+  % \resizebox{.3\textwidth}{
+  % \includegraphics[scale=.55]{figs/planar-subgraph}\raisebox{.077\textwidth}{$\subseteq$}\includegraphics[scale=.55]{figs/product-lhs}
+  % }
 }
 
 
@@ -29,10 +34,11 @@
   \frametitle{Outline}
 
   \begin{itemize}
+    \item Theorem Statement
     \item Motivation
     \item The Product Structure Theorem for planar graphs
-    \item Proof sketch
-    \item Generalizations
+    % \item Proof sketch
+    \item Generalizations and variants
     \item Applications
   \end{itemize}
 \end{frame}
@@ -64,7 +70,7 @@
 
   \begin{itemize}[<+->]
     \item Can we \emph{factor} a planar graph into simpler graphs?
-    \item Yes, every planar graph is contained in the \emph{strong product} of a graph $H$ of treewidth at most $8$ and a path $P$ \\
+    \item Yes! Every planar graph is contained in the \emph{strong product} of a graph $H$ of \emph{treewidth} at most $8$ and a \emph{path} $P$ \\ ($G\subseteq H\boxtimes P$)
   \end{itemize}
   \includegraphics{figs/planar-subgraph}%
   \only<4>{\raisebox{.11\textwidth}{$\subseteq$}\includegraphics{figs/product-rhs}}%
@@ -115,7 +121,7 @@
       \item nonrepetitive colouring
       \item $p$-centered colouring
       \item $\ell$-vertex ranking
-      \item Adjacency labelling (universal graphs)
+      \item adjacency labelling (universal graphs)
     \end{itemize}
   \end{itemize}
   \begin{center}
@@ -129,9 +135,9 @@
 \begin{frame}
   \frametitle{The Precursor}
 
-  \textbf{Theorem (Siebertz-Pilipczuk 201X):}  For any planar triangulation $G$, there exists a partition $\mathcal{P}$ of $V(G)$ such that
+  \textbf{Theorem (Siebertz-Pilipczuk 2018):}  For any planar triangulation $G$, there exists a partition $\mathcal{P}$ of $V(G)$ such that
   \begin{itemize}
-    \item<2-> Each part of $P$ induces a geodesic in $G$; and
+    \item<2-> Each part of $P$ induces a \emph{geodesic} (shortest path) in $G$; and
     \item<3-> The quotient graph $H:=G/\mathcal{P}$ has treewidth at most $8$
   \end{itemize}
 
@@ -145,11 +151,11 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Layered Partitions}
+  \frametitle{Layered $H$-Partitions}
   \onslide<+->{
-  \textbf{Theorem (Dujmović-Joret-Micek-M-Ueckerdt-Wood 2019):} For any planar triangulation $G$ and any breadth-first spanning-tree $T$ of $G$, there exists a partition $\mathcal{P}$ of $V(G)$ such that
+  \textbf{Theorem (Dujmović-Joret-Micek-M-Ueckerdt-Wood 2019):} For any planar triangulation $G$ and any \emph{breadth-first spanning-tree} $T$ of $G$, there exists a partition $\mathcal{P}$ of $V(G)$ such that
   \begin{itemize}[<+->]
-    \item Each part of $P$ induces a vertical path in $T$
+    \item Each part of $P$ induces a \emph{vertical path} in $T$
     \item The quotient graph $H:=G/\mathcal{P}$ has treewidth at most $8$
   \end{itemize}
   }
@@ -161,5 +167,116 @@
     % \only<5>{\includegraphics{figs/lhp-5}}%
   \end{center}
 \end{frame}
+
+
+\begin{frame}
+  \frametitle{Equivalence}
+
+  Layered $H$-partition theorem and product structure theorem are equivalent:
+  \begin{center}
+    \multiinclude[<+>][format=pdf,start=1]{figs/comparison}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof of Layered $H$-Partition Theorem}
+  \framesubtitle{(Short version: Tutte's Method)}
+
+  \begin{itemize}
+      \item Copy the proof of Pilipczuk-Siebertz (2018) except
+      \begin{itemize}
+          \item<2-> replace ``shortest path in $G$ from $v$ to $C$'' with
+          \item<3-> ``shortest path in $T$ from $v$ to $C$''
+      \end{itemize}
+  \end{itemize}
+  \begin{center}
+    \multiinclude[<+>][format=pdf,start=1]{figs/proof}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Second Version}
+
+    \textbf{Theorem (Dujmović-Joret-Micek-M-Ueckerdt-Wood 2019):}
+    For every planar graph $G$ there exists a planar graph $H$ of treewidth at most \emph{$3$} such that $G\subseteq H\boxtimes P\boxtimes K_3$.
+    \begin{center}
+        \includegraphics{figs/hpk3}
+    \end{center}
+    \onslide<2->{Useful when the (simple) treewidth of $H$ is important}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Algorithmic Version}
+
+    \textbf{Theorem (M 2021):}
+    There exists an $O(n\log n)$ time algorithm that, given an $n$-vertex planar triangulation $G$ finds $H$ and $P$ and the mapping $V(G)\to V(H\boxtimes P)$.
+
+    \begin{center}
+    \includegraphics[scale=.35]{figs/sperner-1}
+    \includegraphics[scale=.35]{figs/sperner-2}
+    \includegraphics[scale=.35]{figs/sperner-explode-2}
+    \end{center}
+    \url{https://github.com/patmorin/lhp}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Generalizations}
+
+    Similar$^*$ product structure theorems for
+
+    \begin{itemize}[<+->]
+       \item graphs of bounded genus and apex-minor free graphs (Dujmović-Joret-Micek-M-Ueckerdt-Wood 2019);
+       \item bounded degree graphs that exclude a fixed graph as a minor (Dujmović-Esperet-M-Walczak-Wood 2020);
+       \item $k$-planar graphs and $(g,k)$-planar graphs (Dujmović-M-Wood 2019).
+   \end{itemize}
+   \begin{center}
+     \includegraphics[width=.3\textwidth]{images/Toroidal_graph_sample}
+     \includegraphics[width=.3\textwidth]{images/3-crossing_Heawood_graph}
+   \end{center}
+
+{\small $^*$$G\subseteq H\boxtimes P$, only the treewidth of $H$ changes}
+
+{\tiny By David Eppstein - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=9852307}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Last Slide}
+
+    \textbf{Next: Applications}
+    \begin{itemize}
+        \item Queue number (David Wood)
+        \item Nonrepetitive colouring (Louis Esperet)
+        \item $p$-Centered colouring and $\ell$-vertex ranking (Piotr Micek)
+        \item Universal graphs (Gwenaël Joret) \\[2em]
+    \end{itemize}
+    \onslide<2->{
+    \begin{center}
+        {\Huge Thank You!}
+    \end{center}
+    }
+    \textbf{References:}
+    {\tiny
+    \begin{itemize}
+        \item Michał Pilipczuk, Sebastian Siebertz: Polynomial bounds for centered colorings on proper minor-closed graph classes. \textit{SODA 2019}: 1501-1520 [arxiv:1807.03683]
+
+        \item Vida Dujmović, Gwenaël Joret, Piotr Micek, Pat Morin, Torsten Ueckerdt, and David R. Wood. Planar graphs have bounded queue-number.
+        \textit{Journal of the ACM}, 67(4):22:1–22:38, 2020.
+        [arxiv:1904.04791]
+
+        \item Vida Dujmović, Louis Esperet, Pat Morin, Bartosz Walczak, and David R. Wood. Clustered 3-colouring graphs of bounded degree. \textit{Combinatorics, Probability and Computing}. Accepted in May 2021. [arxiv:2002.11721].
+
+        \item Vida Dujmović, Pat Morin, and David R. Wood. Graph product structure for non-minor-closed classes. [arxiv:1907.05168].
+
+        \item Pat Morin. A fast algorithm for the product structure of planar graphs. Algorithmica, 83(5):1544–1558, 2021. [arxiv:2004.02530]
+% [doi:10.1109/FOCS.2019.00056][video][doi:10.1145/3385731].
+    \end{itemize}
+    }
+
+
+\end{frame}
+
+
 
 \end{document}
