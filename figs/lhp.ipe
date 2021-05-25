@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.23">
-<info created="D:20210524101947" modified="D:20210524200557"/>
+<info created="D:20210524101947" modified="D:20210525090813"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -320,6 +320,18 @@ h
 <color name="brew7" value="0.701 0.87 0.411"/>
 <color name="brew8" value="0.988 0.803 0.898"/>
 </ipestyle>
+<ipestyle name="brew">
+<color name="aliceblue" value="0.941 0.973 1"/>
+<color name="brew1" value="0.552 0.827 0.78"/>
+<color name="brew2" value="1 1 0.701"/>
+<color name="brew3" value="0.745 0.729 0.854"/>
+<color name="brew4" value="0.984 0.501 0.447"/>
+<color name="brew5" value="0.501 0.694 0.827"/>
+<color name="brew6" value="0.992 0.705 0.384"/>
+<color name="brew7" value="0.701 0.87 0.411"/>
+<color name="brew8" value="0.988 0.803 0.898"/>
+<pen name="fattyfatfat" value="4"/>
+</ipestyle>
 <page>
 <layer name="vertices"/>
 <layer name="edges"/>
@@ -543,51 +555,51 @@ h
 269.989 483.629
 227.886 508.329 c
 </path>
-<path layer="T" stroke="red" pen="ultrafat" cap="1">
+<path layer="T" stroke="red" pen="fattyfatfat" cap="1">
 176 576 m
 117.858 542.947 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 176 576 m
 146.488 538.643 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 176 576 m
 174.182 537.707 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 176 576 m
 203.747 541.076 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 176 576 m
 232.19 545.941 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 146.488 538.643 m
 127.588 510.387 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 146.488 538.643 m
 159.025 508.89 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 203.747 541.076 m
 192.333 513.194 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 203.747 541.076 m
 227.886 508.329 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 159.025 508.89 m
 120.852 480.822 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 159.025 508.89 m
 172.872 481.009 l
 </path>
-<path stroke="red" pen="ultrafat" cap="1">
+<path stroke="red" pen="fattyfatfat" cap="1">
 227.886 508.329 m
 220.027 481.57 l
 </path>

@@ -90,6 +90,7 @@
   % \only<2->{
     \begin{minipage}{.69\textwidth}
       % \bigskip\bigskip
+      \vspace{-5em}
       \emph{width}  $:=$ maximum bag size ${}-1$ \\[1em]
        % \bigskip
       \emph{treewidth} $:=$ min width of tree-decomposition of $G$
@@ -207,6 +208,7 @@
       \begin{itemize}
           \item<2-> replace ``shortest path in $G$ from $v$ to $C$'' with
           \item<3-> ``shortest path in $T$ from $v$ to $C$''
+          \item<4-> check that everything still works
       \end{itemize}
   \end{itemize}
   \begin{center}
@@ -223,7 +225,10 @@
     \begin{center}
         \includegraphics{figs/hpk3}
     \end{center}
-    \onslide<2->{Useful when the (simple) treewidth of $H$ is important}
+    \onslide<2->{Useful when the (simple) treewidth of $H$ is important \\
+      planar and treewidth-$3$ $\Longleftrightarrow$ simple treewidth $3$
+    }
+
 \end{frame}
 
 \begin{frame}
@@ -251,13 +256,13 @@
        \item $k$-planar graphs and $(g,k)$-planar graphs (Dujmović-M-Wood 2019).
    \end{itemize}
    \begin{center}
-     \includegraphics[width=.3\textwidth]{images/Toroidal_graph_sample}
-     \includegraphics[width=.3\textwidth]{images/3-crossing_Heawood_graph}
+     \onslide<1->{\includegraphics[width=.3\textwidth]{images/Toroidal_graph_sample}}
+     \onslide<3->{\includegraphics[width=.3\textwidth]{images/3-crossing_Heawood_graph}}
    \end{center}
 
 {\small $^*$$G\subseteq H\boxtimes P$, only the treewidth of $H$ changes}
 
-{\tiny By David Eppstein - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=9852307}
+{\tiny By David Eppstein - Own work, Public Domain, \url{https://commons.wikimedia.org/w/index.php?curid=9852307}}
 
 \end{frame}
 
@@ -266,10 +271,10 @@
 
     \textbf{Next: Applications}
     \begin{itemize}
-        \item Queue number (David Wood)
-        \item Nonrepetitive colouring (Louis Esperet)
-        \item $p$-Centered colouring and $\ell$-vertex ranking (Piotr Micek)
-        \item Universal graphs (Gwenaël Joret) \\[2em]
+        \item queue number (David Wood)
+        \item nonrepetitive colouring (Louis Esperet)
+        \item $p$-centered colouring and $\ell$-vertex ranking (Piotr Micek)
+        \item universal graphs (Gwenaël Joret) \\[2em]
     \end{itemize}
     \onslide<2->{
     \begin{center}
