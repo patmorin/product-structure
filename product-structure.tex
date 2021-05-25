@@ -23,6 +23,7 @@
   % }
 }
 
+\DeclareMathOperator{\tw}{tw}
 
 \newcommand{\colored}[2]{{\color{#1}#2}}
 
@@ -77,6 +78,25 @@
   \only<3>{\raisebox{.11\textwidth}{$\subseteq$}\includegraphics{figs/product-lhs}}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Treewidth}
+
+  A \emph{tree-decomposition} of a graph $G$ represents each vertex as a subtree of a
+  tree $T$ so  that the subtrees of adjacent vertices intersect in
+  $T$\\[2ex]
+  \begin{minipage}{.3\textwidth}
+  \includegraphics[height=.5\textheight]{images/treedecexam}
+  \end{minipage}%
+  % \only<2->{
+    \begin{minipage}{.69\textwidth}
+      % \bigskip\bigskip
+      \emph{width}  $:=$ maximum bag size ${}-1$ \\[1em]
+       % \bigskip
+      \emph{treewidth} $:=$ min width of tree-decomposition of $G$
+    \end{minipage}
+  % }
+  \vfill\hfill{\tiny\textcolor{gray}{ [Images courtesy of Wikipedia]}}
+\end{frame}
 
 \begin{frame}
   \frametitle{The Strong Graph Product $\boxtimes$}
