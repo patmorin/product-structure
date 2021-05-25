@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="396" height="324">
+<g style="fill:none;stroke:black;stroke-width:2">
+<path d="M322.708,45C450-27,351,387,198,297"/>
+<path d="M73.292,45C-54-27,45,387,198,297"/>
+<line x1="198" y1="261" x2="198" y2="297"/>
+<path d="M198,153C260.999,153,357.417,125.999,322.708,45"/>
+<rect x="275.667" y="134.333" transform="matrix(0.9954, -0.0956, 0.0956, 0.9954, -11.949, 27.3836)" width="8" height="8"  style="fill:white;stroke:none"/>
+<path d="M198,225c72,0,106.709-63.002,62.354-144"/>
+<path d="M229.178,99c-31.5-54.559-103.093-124.559-155.886-54"/>
+<rect x="171.642" y="31.608" transform="matrix(-0.5806, -0.8142, 0.8142, -0.5806, 248.632, 199.286)" width="8" height="8" style="fill:white;stroke:none"/>
+<path d="M291.531,63c-36-62.354-107.916-60.912-155.886,18"/>
+<path d="M166.822,98.999c-31.499,54.56-56.324,151.562,31.178,162.002"/>
+<rect x="134.692" y="173.059" transform="matrix(-0.4148, 0.9099, -0.9099, -0.4148, 357.329, 124.304)" width="8" height="8" style="fill:white;stroke:none"/>
+<path d="M104.469,63c-36,62.354,1.207,123.914,93.531,126"/>
+<line x1="198" y1="117" x2="198" y2="261"/>
+<polyline points="73.292,45 198,117 322.708,45"/>
+</g>
+<g style="fill:blue;stroke:black;stroke-width:2">
+<circle cx="198" cy="153" r="9"/>
+<circle cx="198" cy="189" r="9"/>
+<circle cx="198" cy="225" r="9"/>
+<circle cx="198" cy="297" r="9"/>
+<circle cx="198" cy="261" r="9"/>
+<circle cx="229.178" cy="99" r="9"/>
+<circle cx="260.354" cy="81" r="9"/>
+<circle cx="291.531" cy="63" r="9"/>
+<circle cx="322.709" cy="45" r="9"/>
+<circle cx="166.823" cy="99" r="9"/>
+<circle cx="135.645" cy="81" r="9"/>
+<circle cx="104.469" cy="63" r="9"/>
+<circle cx="73.291" cy="45" r="9"/>
+<circle cx="198" cy="117" r="9"/>
+</g>
+</svg>
